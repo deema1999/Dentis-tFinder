@@ -25,6 +25,7 @@ public class AddressInfo {
         this.City = City;
         this.Street = Street;
         this.PostalCode = PostalCode;
+
     }
 
     public String getCountry() {

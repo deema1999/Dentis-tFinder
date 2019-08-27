@@ -11,6 +11,7 @@ import java.util.ArrayList;
  *
  * @author Deema
  */
+// the interface to enforce the class to  implement  all its functions  
 public interface Builder {
     public ArrayList<EducationInfo> BuildEduSec(ArrayList<EducationInfo> e);
     public ArrayList<AddressInfo> BuildAddSec(ArrayList<AddressInfo> a);
