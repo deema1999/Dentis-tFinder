@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * this class define the information about dentist address.
  */
 package dentist.finder.app;
 
@@ -16,9 +14,7 @@ public class AddressInfo {
     private String Street;
     private int PostalCode;
     
-    public AddressInfo()
-    {
-    }
+    public AddressInfo(){}
     public AddressInfo(String Country, String State, String City, String Street, int PostalCode) {
         this.Country = Country;
         this.State = State;
@@ -70,7 +66,7 @@ public class AddressInfo {
 
     @Override
     public String toString() {
-        return  "Country : " + Country + "      State : " + State + "     City : " + City + "   Street : " + Street + "   PostalCode : " + PostalCode + "\n";
+        return  ".Country : " + Country + "      State : " + State + "     City : " + City + "   Street : " + Street + "   PostalCode : " + PostalCode + "\n";
     }
     
     

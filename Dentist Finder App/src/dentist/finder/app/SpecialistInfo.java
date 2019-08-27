@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * this class define the information related to specialist dentist.
  */
 package dentist.finder.app;
 
@@ -12,12 +10,8 @@ package dentist.finder.app;
 public class SpecialistInfo {
     private String SpecialistArea;
     private int year;
-   
-    
-    public SpecialistInfo()
-    {
-        
-    }
+  
+    public SpecialistInfo(){}
     public SpecialistInfo(String SpecialistArea, int year) {
         this.SpecialistArea = SpecialistArea;
         this.year = year;
@@ -27,7 +21,7 @@ public class SpecialistInfo {
         return SpecialistArea;
     }
 
-    public void setSpecialistArea(String text) { 
+    public void setSpecialistArea(String SpecialistArea) { 
         this.SpecialistArea = SpecialistArea;
     }
    
@@ -41,7 +35,7 @@ public class SpecialistInfo {
 
     @Override
     public String toString() {
-        return  " Specialist Area "  + SpecialistArea + "  year : " + year + "\n";
+        return  " .Specialist Area : "  + SpecialistArea + "  year : " + year + "\n";
     }
 
    

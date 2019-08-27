@@ -21,14 +21,14 @@ public class portal extends javax.swing.JFrame {
     /**
      * Creates new form portal
      */
-    ArrayList <EducationInfo> EduArray = new ArrayList<EducationInfo>();
-    ArrayList <AddressInfo> AddArray = new ArrayList<AddressInfo>();
-    ArrayList <SpecialistInfo> SpecialistArray = new ArrayList<SpecialistInfo>();
-    GeneralPractitioner doc = new GeneralPractitioner();
     
+    Dentist doctor = new Dentist();
+    ArrayList <EducationInfo> EduArray = doctor.EduArray;
+    ArrayList <AddressInfo> AddArray = doctor.AddArray;
+    ArrayList <SpecialistInfo> SpecialistArray = doctor.SpeArray;
     public portal() {
         initComponents();
-        jPanel5.setVisible(false);
+        jPanel5.hide();
        
     }
 
@@ -97,7 +97,7 @@ public class portal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Portal Form");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("New Dentist"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "New Dentist", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
         jLabel1.setText("First Name");
         jLabel1.setToolTipText("");
@@ -162,7 +162,7 @@ public class portal extends javax.swing.JFrame {
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Biography"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Biography", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
         jLabel6.setText("License Country");
 
@@ -216,7 +216,7 @@ public class portal extends javax.swing.JFrame {
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Education"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Education", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
         jLabel10.setText("Degress");
 
@@ -281,7 +281,7 @@ public class portal extends javax.swing.JFrame {
                     .addComponent(jButton1)))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Address"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Address", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
         jLabel14.setText("Country");
 
@@ -359,6 +359,7 @@ public class portal extends javax.swing.JFrame {
                     .addComponent(jButton2)))
         );
 
+        jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jCheckBox1.setText("Specialist");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -366,7 +367,7 @@ public class portal extends javax.swing.JFrame {
             }
         });
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Speciality"));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Speciality", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
         jLabel18.setText("Area of specialization");
 
@@ -454,25 +455,20 @@ public class portal extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton4)
-                            .addGap(40, 40, 40)
-                            .addComponent(jButton6)
-                            .addGap(51, 51, 51)
-                            .addComponent(jButton5)
-                            .addGap(58, 58, 58))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox1)
-                                .addGap(349, 349, 349))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton4)
+                        .addGap(40, 40, 40)
+                        .addComponent(jButton6)
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton5)
+                        .addGap(78, 78, 78))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBox1))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -492,7 +488,7 @@ public class portal extends javax.swing.JFrame {
                         .addComponent(jCheckBox1)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(jButton5)
@@ -502,7 +498,7 @@ public class portal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //this function show the specialist section or hide it based on the checkbox(Specialist) state.
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:if(!jCheckBox1.isSelected())
 
@@ -512,17 +508,18 @@ public class portal extends javax.swing.JFrame {
         }
         else
         {
-          
             jPanel5.setVisible(false);
+       
        
     }//GEN-LAST:event_jCheckBox1ActionPerformed
     }
+    //this button enable user to enter more information related to dentist education.
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         AddEduInfo();
       
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    //this button enable user to enter more information related to dentist address.
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         AddAddInfo();
@@ -533,24 +530,23 @@ public class portal extends javax.swing.JFrame {
         // TODO add your handling code here:
        
     }//GEN-LAST:event_jTextField17ActionPerformed
-
+    //this button enable user to enter more information related to specialist dentist.
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         AddSpeInfo();
        
     }//GEN-LAST:event_jButton3ActionPerformed
-
+    //this button creates a preview form to preview the dentist data.
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        Preview pre = new Preview(jTextField1.getText(),jTextField2.getText(),jTextField3.getText(),jTextField4.getText(),
+        Preview preview = new Preview(jTextField1.getText(),jTextField2.getText(),jTextField3.getText(),jTextField4.getText(),
                 jTextField5.getText(),jTextField6.getText(),jTextField7.getText(),jTextField8.getText(),jTextField9.getText(),
-        doc,jCheckBox1.isSelected());
+        doctor,jCheckBox1.isSelected());
         
-        pre.setVisible(true);
-        
-        
+        preview.setVisible(true);
+       
     }//GEN-LAST:event_jButton4ActionPerformed
-
+    // this button takes the data that entered by the user and 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
@@ -559,10 +555,8 @@ public class portal extends javax.swing.JFrame {
         if(jCheckBox1.isSelected())
         {
            AddSpeInfo();
-           doc.BuildSpecialistSec(SpecialistArray);
+          
         }
-        doc.BuildAddSec(AddArray);
-        doc.BuildEduSec(EduArray);
         jButton4.setEnabled(true);
         jButton6.setEnabled(true);
      
@@ -570,8 +564,9 @@ public class portal extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        int year = doc.getEdu().get(0).getYear();
+        int year = doctor.EduArray.get(0).getYear();
         String degree = EduArray.get(0).getDegree();
+        //this for loop is to find the highest degree name that determined by the nearest year.
         for(int i =1;i<EduArray.size();i++)
         {
             if(EduArray.get(i).getYear()>year)
@@ -581,32 +576,38 @@ public class portal extends javax.swing.JFrame {
             }
             
         }
+        //create wedget preview form to preview the dentist data.
         WedgetPreview wedget = new WedgetPreview(jTextField1.getText(),jTextField2.getText(),jTextField3.getText(),jTextField4.getText(),
-                jTextField5.getText(),degree,AddArray);
+                jTextField5.getText(),degree,doctor);
+        
         wedget.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
+    /* this function get the education information that enterd by user and save it to an object of type EducationInfo 
+       in order to build education information array in build education section function(BuildEduSec)*/
     public void AddEduInfo()
     {
-        EducationInfo e = new EducationInfo();
-        e.setDegree(jTextField10.getText());
-        e.setMajor(jTextField11.getText());
-        e.setSchool(jTextField12.getText());
-        e.setYear(Integer.parseInt(jTextField13.getText()));
-        EduArray.add(e);
+        EducationInfo education = new EducationInfo();
+        education.setDegree(jTextField10.getText());
+        education.setMajor(jTextField11.getText());
+        education.setSchool(jTextField12.getText());
+        education.setYear(Integer.parseInt(jTextField13.getText()));
+        doctor.BuildEduSection(education);
         jTextField10.setText(null);
         jTextField11.setText(null);
         jTextField12.setText(null);
         jTextField13.setText(null);
     }
+    /*this function get the addrees information that enterd by user and save it to an object of type AddressInfo 
+       in order to build address information array in build address section function(BuildEduSec)*/
     public void AddAddInfo()
     {
-        AddressInfo a = new AddressInfo();
-        a.setCountry(jTextField14.getText());
-        a.setCity(jTextField15.getText());
-        a.setState(jTextField16.getText());
-        a.setStreet(jTextField20.getText());
-        a.setPostalCode(Integer.parseInt(jTextField17.getText()));
-        AddArray.add(a);
+        AddressInfo address = new AddressInfo();
+        address.setCountry(jTextField14.getText());
+        address.setCity(jTextField15.getText());
+        address.setState(jTextField16.getText());
+        address.setStreet(jTextField20.getText());
+        address.setPostalCode(Integer.parseInt(jTextField17.getText()));
+        doctor.BuildAddSection(address);
         jTextField14.setText(null);
         jTextField15.setText(null);
         jTextField16.setText(null);
@@ -614,15 +615,18 @@ public class portal extends javax.swing.JFrame {
         jTextField20.setText(null);
         
     }
+    /*this function get the specialist information that enterd by user and save it to an object of type SpecialistInfo 
+       in order to build specialist information array in build specialist section function(BuildEduSec)*/
     public void AddSpeInfo()
     {
-        SpecialistInfo ss = new SpecialistInfo();
-        ss.setSpecialistArea(jTextField21.getText());
-        ss.setYear(Integer.parseInt(jTextField19.getText()));
-        SpecialistArray.add(ss); 
+        SpecialistInfo specialist = new SpecialistInfo();
+        specialist.setSpecialistArea(jTextField21.getText());
+        specialist.setYear(Integer.parseInt(jTextField19.getText()));
+        doctor.BuildSpecialistSection(specialist);
         jTextField21.setText(null);
         jTextField19.setText(null);
     }
+  
     
     /**
      * @param args the command line arguments
@@ -656,6 +660,7 @@ public class portal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() { 
                 portal p = new portal();
+                
                 p.setVisible(true);
                 
             }
@@ -716,4 +721,6 @@ public class portal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+   
 }
